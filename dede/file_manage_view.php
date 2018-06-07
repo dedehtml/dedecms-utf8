@@ -119,6 +119,7 @@ else if($fmdo=="edit")
     $contentView = "<textarea name='str' id='str' style='width:99%;height:450px;background:#ffffff;'>$content</textarea>\r\n";
     $GLOBALS['filename'] = $filename;
     $path_parts  = pathinfo($filename);
+	$GLOBALS['token'] = make_hash();
     if ( $path_parts['extension'] == 'php' )
     {
         $GLOBALS['extension'] = 'text/x-php';
