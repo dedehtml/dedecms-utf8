@@ -8,6 +8,14 @@
  * @license        http://help.dedecms.com/usersguide/license.html
  * @link           http://www.dedecms.com
  */
+if(isset($_POST["PHPSESSID"])) 
+{
+	session_id($_POST["PHPSESSID"]);
+} 
+else if(isset($_GET["PHPSESSID"])) 
+{
+	session_id($_GET["PHPSESSID"]);
+}
 session_start();
 
 /**

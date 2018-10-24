@@ -48,7 +48,7 @@ while($row=$dsql->GetObject())
 if($dopost=='quick')
 {
     $tl = new TypeLink(0);
-    $typeOptions = $tl->GetOptionArray(0,0,$channelid);
+    $typeOptions = $tl->GetOptionArray(0,0,0);
     include DedeInclude('templets/catalog_add_quick.htm');
     exit();
 }

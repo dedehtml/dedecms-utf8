@@ -164,7 +164,7 @@ while($file = $dh->read()) {
         $filetime = filemtime("$inpath/$file");
         $filetime = MyDate("Y-m-d H:i:s", $filetime);
     }
-
+	$file = gb2utf8($file);
     if($file == ".") continue;
     else if($file == "..")
     {

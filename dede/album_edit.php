@@ -53,7 +53,7 @@ if($dopost!='save')
     $ddmaxwidth = $addRow["ddmaxwidth"];
     $pagepicnum = $addRow["pagepicnum"];
     $tags = GetTags($aid);
-    $arcRow=XSSClean($arcRow);$addRow=XSSClean($addRow);
+    //$arcRow=XSSClean($arcRow);$addRow=XSSClean($addRow);
     include DedeInclude("templets/album_edit.htm");
     exit();
 }

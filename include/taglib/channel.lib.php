@@ -106,7 +106,7 @@ function lib_channel(&$ctag,&$refObj)
     
     $totalRow = $dsql->GetTotalRow();
     //如果用子栏目模式，当没有子栏目时显示同级栏目
-    if($type=='son' && $reid!=0 && $totalRow==0)
+    if($type=='son' && $reid!=0 && $totalRow==0 && $noself=='')
     {
         $sql = "SELECT id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
             FROM `#@__arctype` WHERE reid='$reid' And ishidden<>1 order by sortrank asc limit 0, $line ";

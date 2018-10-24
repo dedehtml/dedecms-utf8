@@ -40,6 +40,7 @@ while(($file = $dh->read()) !== false)
 			$filesize=$ty1.".".substr($ty2,0,1);
 		}
 	}
+	$file = gb2utf8($file);
 	if($file == ".")
 	{
 		continue;

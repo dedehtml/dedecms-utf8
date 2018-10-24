@@ -48,7 +48,7 @@ function ch_img($fvalue,&$arcTag,&$refObj,$fname='')
     $mrow = 0;
     $mcol = 0;
     $images = array();
-    $innerTmp = $arcTag->GetInnerText();
+    $innerTmp = ($arcTag=="") ? trim($arcTag) : trim($arcTag->GetInnerText());
     if(trim($innerTmp)=='')
     {
         $innerTmp = GetSysTemplets("channel_article_image.htm");

@@ -114,7 +114,7 @@ function GetCurContent($body)
     $htd = new DedeHttpDown();
     $basehost = "http://".$_SERVER["HTTP_HOST"];
     $img_array = array();
-    preg_match_all("/src=[\"|'|\s]([^\"|^\'|^\s]*?)/isU",$body,$img_array);
+    preg_match_all("/<img.*?src=[\"|'|\s]([^\"|^\'|^\s]*?)/isU",$body,$img_array);
     
     $img_array = array_unique($img_array[1]);
     $imgUrl = $cfg_uploaddir.'/'.MyDate("ymd", time());

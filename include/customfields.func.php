@@ -536,7 +536,7 @@ function GetFormItemValue($ctag, $fvalue, $admintype='admin', $fieldname='')
         else
         {
             $ntag = $ndtp->GetTag("img");
-            $fvalue = trim($ntag->GetInnerText());
+            $fvalue = ($ntag=="") ? trim($ntag) : trim($ntag->GetInnerText());
         }
         $innertext = "<input type='text' name='$fieldname' value='$fvalue' id='$fieldname' style='width:300px'  class='text' /> <input name='".$fieldname."_bt' class='inputbut' type='button' value='浏览...' onClick=\"SelectImage('form1.$fieldname','big')\" />\r\n";
     }

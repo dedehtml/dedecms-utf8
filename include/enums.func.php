@@ -51,7 +51,7 @@ function WriteEnumsCache($egroup='')
         if ($tenum) $dsql->ExecuteNoneQuery("UPDATE `#@__stepselect` SET `issign`=2 WHERE egroup='$egroup'; ");
         fwrite($fp,'?'.'>');
         fclose($fp);
-        if(empty($issign)) WriteEnumsJs($egroup);
+        WriteEnumsJs($egroup);
     }
     return '成功更新所有枚举缓存！';
 }
